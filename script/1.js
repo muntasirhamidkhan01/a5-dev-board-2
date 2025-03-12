@@ -1,3 +1,4 @@
+
 // Random Theme Color picker
 document.getElementById("theme-btn").addEventListener('click', function(event){
    
@@ -23,6 +24,7 @@ function showCurrentDate() {
 showCurrentDate(); 
 // Completed btn-1
 document.getElementById("completed-btn-1").addEventListener('click', function(event){
+    // event.preventDefault();
     alert('Board Updated Successfully')
     const taskNumber = document.getElementById('task-number').innerText;
     const convertedTaskNumber = parseInt(taskNumber);
@@ -204,11 +206,15 @@ document.getElementById("completed-btn-6").addEventListener('click', function(ev
 
     // transaction message
     const transactionContainer = document.getElementById("transaction-id");
-    const p = document.createElement("p");
-    p.className = "transaction-class";
-    p.innerText = `You have Completed the Improve Job searching task at ${time}`;
-    transactionContainer.appendChild(p);
-
+    // const p = document.createElement("p");
+    // p.className = "transaction-class";
+    // p.innerText = `You have Completed the Improve Job searching task at ${time}`;
+    // transactionContainer.appendChild(p);
+    const div = document.createElement("div");
+    // p.className = "transaction-class";
+    div.innerHTML = `<h1 class="transaction-class">You have Completed the Improve Job searching task at ${time}</h1>`;
+    transactionContainer.appendChild(div);
+    
     decrease3();
     increase3();
     this.disabled = true;
