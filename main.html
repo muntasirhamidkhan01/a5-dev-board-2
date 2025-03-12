@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answers</title>
+    <link rel="icon" href="assets/logo.png">
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+</head>
+<body class="bg-[#F4F7FF] mx-auto py-6">
+            <!-- Header Section -->
+    <header class="max-w-7xl mx-auto mb-4">
+        <section class="flex justify-between  items-center bg-white p-3 rounded-sm">
+            <div class="flex items-center space-x-1">
+                <img class="w-10" src="assets/logo.png" alt="">
+                <h1 class="text-2xl bg-[#F4F7FF]">Dev <span class="font-extrabold">Board</span></h1>
+            </div>
+            <div class="flex items-center space-x-6 ">
+                <button onclick="window.history.back()" id="back-to-home-btn" class="btn btn-primary ">Back to Home</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section>
+            <!-- Question-box:01 -->
+            <div>
+                <h1 class="text-center pb-2 font-extrabold">Blogs</h1>
+                <div  class="bg-white rounded max-w-7xl mx-auto mb-4">
+                    <h1 class="font-bold p-6">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr class="border-dashed opacity-20">
+                    <p class="p-6 text-gray-500"> ID, Class Name, Tag Name, Query Selector, Name Attribute.</p>
+                </div>
+            </div>
+            <!-- Question-box:02 -->
+            <div>
+                <div  class="bg-white rounded max-w-7xl mx-auto mb-4">
+                    <h1 class="font-bold p-6">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                    <hr class="border-dashed opacity-20">
+                    <p class="p-6 text-gray-500">innerHTML is all about value of HTML content, including tags and innerText is about value of visible text, ignoring hidden elements.Finally, at last text content is all about managing text, including hidden elements, without formatting.</p>
+                </div>
+            </div>
+            <!-- Question-box:03 -->
+            <div>
+                <div  class="bg-white rounded max-w-7xl mx-auto mb-4">
+                    <h1 class="font-bold p-6">Question-3: What is event delegation in the DOM?</h1>
+                    <hr class="border-dashed opacity-20">
+                    <p class="p-6 text-gray-500">Event delegation uses a parent node to handle node child events efficiently via event bubbling.</p>
+                </div>
+            </div>
+            <!-- Question-box:04 -->
+            <div>
+                <div  class="bg-white rounded max-w-7xl mx-auto mb-4">
+                    <h1 class="font-bold p-6">Question-4: What is event bubbling in the DOM?</h1>
+                    <hr class="border-dashed opacity-20">
+                    <p class="p-6 text-gray-500">Event bubbling is when an event starts from the target element and moves up to its ancestors in the DOM hierarchy.</p>
+                </div>
+            </div>
+            <!-- Question-box:05 -->
+            <div>
+                <div  class="bg-white rounded max-w-7xl mx-auto mb-4">
+                    <h1 class="font-bold p-6">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                    <hr class="border-dashed opacity-20">
+                    <p class="p-6 text-gray-500">Event bubbling is when an event starts from the target element and bubbles up to its parent elements.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script/questionPage.js"></script>
+    
+</body>
+</html>

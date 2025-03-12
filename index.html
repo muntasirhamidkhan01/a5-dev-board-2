@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="icon" href="assets/logo.png">
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-[#F4F7FF] mx-auto py-6">
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto mb-4">
+        <section class="flex justify-between items-center bg-white px-3 rounded-sm">
+            <div class="flex items-center space-x-1">
+                <img class="w-10" src="./assets/logo.png" alt="">
+                <h1 class="text-2xl bg-[#F4F7FF]">Dev <span class="font-extrabold">Board</span></h1>
+            </div>
+            <div class="flex items-center space-x-6 ">
+                <div class="flex justify-around items-center px-2 py-1 space-x-3 bg-[#F4F7FF] rounded-2xl">
+                    <img src="assets/checkbox.png" alt="">
+                <h1 id="checkbox-number" class="font-extrabold rounded-xl">23</h1>
+                </div>
+                <button id="theme-btn">
+                  <img class="bg-[#F4F7FF] p-2 rounded-full cursor-pointer" src="./assets/theme-btn.png" alt="">
+                </button>
+            </div>
+        </section>
+    </header>
+    <main class="max-w-7xl mx-auto grid grid-cols-12">
+        <!-- Action Section left -->
+        <section class="col-span-9 mr-5 bg-white">
+            <div class="grid grid-cols-4 gap-4">
+                <!-- Small card -01 -->
+                 <div class="bg-[#F4F7FF] flex justify-center items-center space-x-2 ml-4 p-4 my-4 rounded-md col-span-1">
+                    <img class="bg-white p-3 rounded-full" src="assets/checkbox.png" alt="">
+                    <div>
+                        <p class="text-[rgb(0,48,60)]">Task Assigned</p>
+                        <!-- Js: task-number -->
+                        <p id="task-number" class="text-2xl font-extrabold">6</p>
+                    </div>
+                 </div>
+                <!-- Big-card -02 -->
+                 <div id="big-card" class="bg-[#F4F7FF] bg-gradient-to-r from-blue-500 from-10% via-sky-500 via-30% to-red-500 to-90% flex justify-start items-center space-x-2 p-4 my-4 rounded-md col-span-2">
+                    <div>
+                        <img class=" border-2 border-dashed border-white w-12" src="./assets/board.png" alt="">
+                    </div>
+                    <div>
+                        <p class="text-white">Discover Something <br> New Today!</p>
+                    </div>
+                 </div>
+                <!-- Small card -03 date-->
+                <div class="bg-[#F4F7FF] flex justify-center items-center space-x-2 mr-4 p-4 my-4 rounded-md col-span-1">
+                    <img class="bg-white p-3 rounded-3xl" src="assets/calender.png" alt="">
+                    <div>
+                        <h2 id="current-date"  class="text-base font-extrabold"></h2>
+                    </div>
+                 </div>                    
+            </div>
+
+            <hr class="border-dashed opacity-20">
+            
+            <!-- Cards Parent -->
+             <div class="grid grid-cols-3">
+                <!-- Card -01 -->
+                <div class="card  bg-[#F4F7FF] card-xs shadow-sm m-4">
+                    <div class="card-body  p-4">
+                      <div class=" font-normal bg-white w-1/4 rounded">
+                        <h2 class="text-center card-title p-2">ShopEase</h2>
+                      </div>
+                      <h2 class="card-title text-2xl">Fix Mobile Button Issue</h2>
+                      <div class="bg-white flex justify-center items-center">
+                        <p class="p-3 text-gray-500 text-base">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
+                      </div>
+                      <div class="flex justify-between card-actions">
+                        <div>
+                            <p class="text-sm text-gray-500">Deadline</p>
+                            <p class="font-bold text-base">21 March 2025</p>
+                        </div>
+                        <!-- completed-btn-1 -->
+                        <div>
+                            <button id="completed-btn-1" class="btn btn-primary w-28">Completed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Card -02 -->
+                <div class="card  bg-[#F4F7FF] card-xs shadow-sm m-4">
+                    <div class="card-body  p-4">
+                      <div class=" font-normal bg-white w-1/4 rounded">
+                        <h2 class="text-center card-title p-2">CloudSync</h2>
+                      </div>
+                      <h2 class="card-title text-2xl">Add Dark Mode</h2>
+                      <div class="bg-white flex justify-center items-center">
+                        <p class="p-3 text-gray-500 text-base">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                      </div>
+                      <div class="flex justify-between card-actions">
+                        <div>
+                            <p class="text-sm text-gray-500">Deadline</p>
+                            <p class="font-bold text-base">21 March 2025</p>
+                        </div>
+                        <div>
+                          <!-- Completed btn-2 -->
+                            <button id="completed-btn-2" class="btn btn-primary w-28">Completed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Card -03 -->
+                <div class="card  bg-[#F4F7FF] card-xs shadow-sm m-4">
+                    <div class="card-body  p-4">
+                      <div class=" font-normal bg-white w-1/4 rounded">
+                        <h2 class="text-center card-title p-2">SwiftPay</h2>
+                      </div>
+                      <h2 class="card-title text-2xl">Add New Reaction</h2>
+                      <div class="bg-white flex justify-center items-center">
+                        <p class="p-3 text-gray-500 text-base">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
+                      </div>
+                      <div class="flex justify-between card-actions">
+                        <div>
+                            <p class="text-sm text-gray-500">Deadline</p>
+                            <p class="font-bold text-base">21 March 2025</p>
+                        </div>
+                        <div>
+                          <!-- Completed btn -3 -->
+                            <button id="completed-btn-3" class="btn btn-primary w-28">Completed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Card -04 -->
+                <div class="card bg-[#F4F7FF] card-xs shadow-sm m-4">
+                    <div class="card-body  p-4">
+                      <div class=" font-normal bg-white w-1/4 rounded">
+                        <h2 class="text-center card-title p-2">Meta</h2>
+                      </div>
+                      <h2 class="card-title text-2xl">Add new emoji 🤲</h2>
+                      <div class="bg-white flex justify-center items-center">
+                        <p class="p-3 text-gray-500 text-base">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
+                      </div>
+                      <div class="flex justify-between card-actions">
+                        <div>
+                            <p class="text-sm text-gray-500">Deadline</p>
+                            <p class="font-bold text-base">21 March 2025</p>
+                        </div>
+                        <div>
+                          <!-- Completed btn -04 -->
+                            <button id="completed-btn-4" class="btn btn-primary w-28">Completed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Card -05 -->
+                <div class="card = bg-[#F4F7FF] card-xs shadow-sm m-4">
+                    <div class="card-body  p-4">
+                      <div class=" font-normal bg-white w-1/4 rounded">
+                        <h2 class="text-center card-title p-2 w-auto">Google LLC</h2>
+                      </div>
+                      <h2 class="card-title text-2xl">Integrate OpenAI API </h2>
+                      <div class="bg-white flex justify-center items-center">
+                        <p class="p-3 text-gray-500 text-base">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
+                      </div>
+                      <div class="flex justify-between card-actions">
+                        <div>
+                            <p class="text-sm text-gray-500">Deadline</p>
+                            <p class="font-bold text-base">21 March 2025</p>
+                        </div>
+                        <div>
+                          <!-- Completed btn -05 -->
+                            <button id="completed-btn-5" class="btn btn-primary w-28">Completed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Card -06 -->
+                <div class="card bg-[#F4F7FF] card-xs shadow-sm m-4">
+                    <div class="card-body  p-4">
+                      <div class=" font-normal bg-white w-1/4 rounded">
+                        <h2 class="text-center card-title p-2 w-auto">Googldoar</h2>
+                      </div>
+                      <h2 class="card-title text-2xl">Improve Job searching </h2>
+                      <div class="bg-white flex justify-center items-center">
+                        <p class="p-3 text-gray-500 text-base">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
+                      </div>
+                      <div class="flex justify-between card-actions">
+                        <div>
+                            <p class="text-sm text-gray-500">Deadline</p>
+                            <p class="font-bold text-base">21 March 2025</p>
+                        </div>
+                        <div>
+                          <!-- Completed btn - 06 -->
+                            <button id="completed-btn-6" class="btn btn-primary w-28">Completed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+        </section>
+        <!-- Activity Section right -->
+         <section class="col-span-3 bg-white">
+            <div class="flex justify-center items-center flex-col">
+                <div class="flex space-x-2 space-y-2 pt-2">
+                    <img src="./assets/activity.png" alt="">
+                    <p>Activity Log</p>
+                </div>
+                <button id="clear-history-btn" class="btn btn-primary hover:opacity-80 active:scale-95 transition">Clear History</button>
+            </div>
+            <!-- Transaction Activity -->
+            <div>
+                <div id="transaction-id" class="transaction-class"></div>
+                <!-- <div  id="transaction-id" class="bg-[#F4F7FF] m-4 p-2 rounded"></div> -->
+            </div>                
+         </section>
+    </main>
+    <script src="script/questionPage.js"></script>
+    <script src="script/utilities.js"></script>
+    <script src="script/1.js"></script>
+</body>
+</html>
